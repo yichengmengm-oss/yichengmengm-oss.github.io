@@ -10,12 +10,16 @@
   </div>
   <div class="profile-info">
     <h1 class="profile-name">{{ .Site.Params.author }}</h1>
-    <p class="profile-quote">{{ .Site.Title }}</p>
     <p class="profile-role">{{ .Site.Params.intro }}</p>
     {{ with .Site.Params.bio }}
     <p class="profile-bio">{{ . }}</p>
     {{ end }}
   </div>
+</section>
+
+<section class="signature">
+  <hr>
+  <p>{{ .Site.Title }}</p>
 </section>
 
 {{ with .Site.Params.now }}
