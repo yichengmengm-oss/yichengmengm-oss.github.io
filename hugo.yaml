@@ -4,10 +4,11 @@ title: "Do not go gentle into that good night"
 theme: ink
 
 params:
-  author: 浣犵殑鍚嶅瓧
-  intro: XX澶у鐗╃悊绯绘湰绉戠敓
+  author: 你的名字
+  intro: XX大学物理系本科生
   email: your@email.com
-  now: 鐩墠鍦ㄦ帹 WKB 杩戜技鐨勯珮闃朵慨姝ｏ紝鍦ㄨ Sakurai 绗簩绔犮€?
+  now: 目前在推 WKB 近似的高阶修正，在读 Sakurai 第二章。
+
 menu:
   main:
     - name: About
