@@ -140,28 +140,20 @@ main {
   margin-top: 0.3rem;
 }
 
+.profile-quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+  letter-spacing: 0.02em;
+}
+
 .profile-bio {
   font-size: 0.92rem;
   color: var(--text);
   margin-top: 0.8rem;
   line-height: 1.75;
   max-width: 460px;
-}
-
-/* ---------- quote ---------- */
-.quote {
-  text-align: center;
-  padding: 1.5rem 0 2.5rem;
-  border-bottom: 1px solid var(--border);
-}
-
-.quote p {
-  font-size: 1.4rem;
-  font-weight: 400;
-  font-style: italic;
-  letter-spacing: 0.02em;
-  color: var(--text);
-  line-height: 1.8;
 }
 
 /* ---------- now ---------- */
@@ -383,7 +375,6 @@ main {
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile-bio { max-width: 100%; }
   .cards { grid-template-columns: 1fr; }
-  .quote p { font-size: 1.2rem; }
   .site-nav { flex-direction: column; gap: 0.5rem; }
   .nav-links { flex-wrap: wrap; gap: 1rem; }
 }
