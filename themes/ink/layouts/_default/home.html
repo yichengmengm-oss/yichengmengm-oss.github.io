@@ -1,0 +1,38 @@
+{{ define "main" }}
+<section class="hero">
+  {{ with .Site.Params.quote }}
+  <p class="hero-quote">{{ . }}</p>
+  {{ end }}
+</section>
+
+<section class="intro">
+  <div class="intro-text">
+    <p>Hello, I&rsquo;m <strong>{{ .Site.Params.author }}</strong>.</p>
+    <p>{{ .Site.Params.intro }}</p>
+  </div>
+</section>
+
+{{ with .Site.Params.now }}
+<section class="now-status">
+  <span class="now-label">Now</span>
+  <p>{{ . }}</p>
+</section>
+{{ end }}
+
+<section class="sections-grid">
+  {{ range where .Site.Sections "Section" "in" (slice "notes" "poems" "essays" "math") }}
+  <a href="{{ .RelPermalink }}" class="section-card">
+    <span class="card-icon">
+      {{ if eq .Section "notes" }}&#x1F4D6;{{ end }}
+      {{ if eq .Section "poems" }}&#x1F33F;{{ end }}
+      {{ if eq .Section "essays" }}&#x270D;&#xFE0F;{{ end }}
+      {{ if eq .Section "math" }}&#x221E;{{ end }}
+    </span>
+    <h2>{{ .Title }}</h2>
+    {{ with .Description }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </a>
+  {{ end }}
+</section>
+{{ end }}
