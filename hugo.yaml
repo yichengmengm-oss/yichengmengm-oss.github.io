@@ -4,12 +4,12 @@ title: "Do not go gentle into that good night"
 theme: ink
 
 params:
-  author: 你的名字
-  intro: XX大学物理系本科生
+  author: 孟奕丞
+  intro: 北京大学物理学院本科生
   bio: >
     这里放一句简短的个人介绍，比如你的研究兴趣、方向，或者你想让别人了解你的一句话。
-  email: your@email.com
-  now: 目前在推 WKB 近似的高阶修正，在读 Sakurai 第二章。
+  email: 2400012434@stu.pku.edu.cn
+  now: 学习量子场论。
   avatar: ""
 
 menu:
