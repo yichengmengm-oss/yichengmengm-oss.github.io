@@ -156,11 +156,11 @@ main {
 }
 
 .quote p {
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   font-weight: 400;
   font-style: italic;
   letter-spacing: 0.02em;
-  color: var(--text-muted);
+  color: var(--text);
   line-height: 1.8;
 }
 
@@ -383,7 +383,7 @@ main {
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile-bio { max-width: 100%; }
   .cards { grid-template-columns: 1fr; }
-  .quote p { font-size: 1rem; }
+  .quote p { font-size: 1.2rem; }
   .site-nav { flex-direction: column; gap: 0.5rem; }
   .nav-links { flex-wrap: wrap; gap: 1rem; }
 }
