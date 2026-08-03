@@ -17,11 +17,6 @@
   </div>
 </section>
 
-<section class="signature">
-  <hr>
-  <p>{{ .Site.Title }}</p>
-</section>
-
 {{ with .Site.Params.now }}
 <section class="now-status">
   <span class="now-label">Now</span>
@@ -44,6 +39,11 @@
     {{ end }}
   </a>
   {{ end }}
+</section>
+
+<section class="signature">
+  <hr>
+  <p>{{ .Site.Title }}</p>
 </section>
 
 {{ end }}
