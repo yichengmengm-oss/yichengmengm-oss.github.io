@@ -157,12 +157,12 @@ main {
 .signature hr {
   border: none;
   border-top: 1px solid var(--border);
-  width: 3rem;
+  width: 4rem;
   margin: 0 auto 1rem;
 }
 
 .signature p {
-  font-size: 0.92rem;
+  font-size: 1.15rem;
   font-style: italic;
   color: var(--text-muted);
   letter-spacing: 0.03em;
