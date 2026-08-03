@@ -1,15 +1,24 @@
 {{ define "main" }}
-<section class="hero">
-  {{ with .Site.Params.quote }}
-  <p class="hero-quote">{{ . }}</p>
-  {{ end }}
+
+<section class="profile">
+  <div class="profile-avatar">
+    {{ if .Site.Params.avatar }}
+    <img src="{{ .Site.Params.avatar }}" alt="{{ .Site.Params.author }}">
+    {{ else }}
+    <span class="avatar-placeholder">{{ substr .Site.Params.author 0 1 }}</span>
+    {{ end }}
+  </div>
+  <div class="profile-info">
+    <h1 class="profile-name">{{ .Site.Params.author }}</h1>
+    <p class="profile-role">{{ .Site.Params.intro }}</p>
+    {{ with .Site.Params.bio }}
+    <p class="profile-bio">{{ . }}</p>
+    {{ end }}
+  </div>
 </section>
 
-<section class="intro">
-  <div class="intro-text">
-    <p>Hello, I&rsquo;m <strong>{{ .Site.Params.author }}</strong>.</p>
-    <p>{{ .Site.Params.intro }}</p>
-  </div>
+<section class="quote">
+  <p>{{ .Site.Title }}</p>
 </section>
 
 {{ with .Site.Params.now }}
@@ -19,9 +28,9 @@
 </section>
 {{ end }}
 
-<section class="sections-grid">
-  {{ range where .Site.Sections "Section" "in" (slice "notes" "poems" "essays" "math") }}
-  <a href="{{ .RelPermalink }}" class="section-card">
+<section class="cards">
+  {{ range sort (where .Site.Sections "Section" "in" (slice "notes" "poems" "essays" "math")) "Weight" "asc" }}
+  <a href="{{ .RelPermalink }}" class="card">
     <span class="card-icon">
       {{ if eq .Section "notes" }}&#x1F4D6;{{ end }}
       {{ if eq .Section "poems" }}&#x1F33F;{{ end }}
@@ -35,4 +44,5 @@
   </a>
   {{ end }}
 </section>
+
 {{ end }}
