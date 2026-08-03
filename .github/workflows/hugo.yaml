@@ -1,41 +1,36 @@
-baseURL: https://yichengmengm-oss.github.io/
-locale: zh-cn
-title: "Do not go gentle into that good night"
-theme: ink
+name: Deploy Hugo
 
-params:
-  author: "浣犵殑鍚嶅瓧"
-  intro: "XX澶у鐗╃悊绯绘湰绉戠敓"
-  email: "your@email.com"
-  now: "鐩墠鍦ㄦ帹 WKB 杩戜技鐨勯珮闃朵慨姝ｏ紝鍦ㄨ Sakurai 绗簩绔犮€?
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
 
-menu:
-  main:
-    - name: About
-      url: /
-      weight: 1
-    - name: Notes
-      url: /notes/
-      weight: 2
-    - name: Poems
-      url: /poems/
-      weight: 3
-    - name: Essays
-      url: /essays/
-      weight: 4
-    - name: Math
-      url: /math/
-      weight: 5
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
-markup:
-  goldmark:
-    extensions:
-      passthrough:
-        delimiters:
-          block:
-            - - '$$'
-              - '$$'
-          inline:
-            - - '$'
-              - '$'
-        enable: true
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: '0.164.0'
+          extended: true
+      - name: Build
+        run: hugo --minify
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./public
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
