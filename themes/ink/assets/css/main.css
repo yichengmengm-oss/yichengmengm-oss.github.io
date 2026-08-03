@@ -140,20 +140,32 @@ main {
   margin-top: 0.3rem;
 }
 
-.profile-quote {
-  font-size: 0.95rem;
-  font-style: italic;
-  color: var(--text-muted);
-  margin-top: 0.2rem;
-  letter-spacing: 0.02em;
-}
-
 .profile-bio {
   font-size: 0.92rem;
   color: var(--text);
   margin-top: 0.8rem;
   line-height: 1.75;
   max-width: 460px;
+}
+
+/* ---------- signature ---------- */
+.signature {
+  text-align: center;
+  padding: 1rem 0 1.8rem;
+}
+
+.signature hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  width: 3rem;
+  margin: 0 auto 1rem;
+}
+
+.signature p {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
 }
 
 /* ---------- now ---------- */
