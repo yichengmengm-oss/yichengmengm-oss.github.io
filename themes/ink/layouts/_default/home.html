@@ -11,9 +11,6 @@
   <div class="profile-info">
     <h1 class="profile-name">{{ .Site.Params.author }}</h1>
     <p class="profile-role">{{ .Site.Params.intro }}</p>
-    {{ with .Site.Params.bio }}
-    <p class="profile-bio">{{ . }}</p>
-    {{ end }}
     <a href="/about/" class="profile-more">About me &rarr;</a>
   </div>
 </section>
