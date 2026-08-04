@@ -221,12 +221,6 @@ main {
   transform: translateY(-1px);
 }
 
-.card-icon {
-  font-size: 1.1rem;
-  display: block;
-  margin-bottom: 0.8rem;
-}
-
 .card h2 {
   font-size: 1rem;
   font-weight: 600;
