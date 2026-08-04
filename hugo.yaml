@@ -20,14 +20,14 @@ menu:
     - name: Notes
       url: /notes/
       weight: 2
-    - name: Poems
-      url: /poems/
+    - name: Math
+      url: /math/
       weight: 3
     - name: Essays
       url: /essays/
       weight: 4
-    - name: Math
-      url: /math/
+    - name: Poems
+      url: /poems/
       weight: 5
 
 markup:
