@@ -1,5 +1,6 @@
 ---
 title: Notes
+weight: 1
 description: 自编课程讲义，从量子力学到经典力学。
 ---
 
