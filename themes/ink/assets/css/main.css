@@ -148,6 +148,17 @@ main {
   max-width: 460px;
 }
 
+.profile-more {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-top: 0.8rem;
+  transition: color 0.15s;
+}
+.profile-more:hover {
+  color: var(--accent-hover);
+}
+
 /* ---------- signature ---------- */
 .signature {
   text-align: center;
