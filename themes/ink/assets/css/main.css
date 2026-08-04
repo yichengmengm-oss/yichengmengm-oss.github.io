@@ -201,36 +201,39 @@ main {
 
 /* ---------- cards ---------- */
 .cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
   padding: 1.5rem 0 3rem;
 }
 
 .card {
-  display: block;
-  padding: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1rem 1.2rem;
   background: var(--card-bg);
   border: 1px solid var(--border);
+  border-left: 3px solid var(--border);
   border-radius: 2px;
-  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+  transition: border-color 0.2s, background 0.2s;
 }
 .card:hover {
-  border-color: var(--accent);
+  border-left-color: var(--accent);
   background: #f0ede6;
-  transform: translateY(-1px);
 }
 
 .card h2 {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--text);
+  flex-shrink: 0;
 }
 
 .card p {
   font-size: 0.82rem;
   color: var(--text-muted);
-  margin-top: 0.3rem;
+  text-align: right;
   line-height: 1.5;
 }
 
@@ -391,7 +394,8 @@ main {
   html { font-size: 16px; }
   .profile { flex-direction: column; align-items: center; text-align: center; }
   .profile-bio { max-width: 100%; }
-  .cards { grid-template-columns: 1fr; }
+  .card { flex-direction: column; align-items: flex-start; gap: 0.2rem; }
+  .card p { text-align: left; }
   .site-nav { flex-direction: column; gap: 0.5rem; }
   .nav-links { flex-wrap: wrap; gap: 1rem; }
 }
