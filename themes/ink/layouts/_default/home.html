@@ -25,12 +25,6 @@
 <section class="cards">
   {{ range sort (where .Site.Sections "Section" "in" (slice "notes" "poems" "essays" "math")) "Weight" "asc" }}
   <a href="{{ .RelPermalink }}" class="card">
-    <span class="card-icon">
-      {{ if eq .Section "notes" }}&#x1F4D6;{{ end }}
-      {{ if eq .Section "poems" }}&#x1F33F;{{ end }}
-      {{ if eq .Section "essays" }}&#x270D;&#xFE0F;{{ end }}
-      {{ if eq .Section "math" }}&#x221E;{{ end }}
-    </span>
     <h2>{{ .Title }}</h2>
     {{ with .Description }}
     <p>{{ . }}</p>
