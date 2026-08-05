@@ -10,7 +10,7 @@ params:
     About me
   email: 2400012434@stu.pku.edu.cn
   now: 初九，潜龙勿用。
-  avatar: ""
+  avatar: "/avatar.jpg"
 
 menu:
   main:
