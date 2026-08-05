@@ -107,9 +107,9 @@ main {
 
 .profile-avatar img {
   width: 100%;
-  height: 120%;
+  height: 110%;
   object-fit: cover;
-  object-position: 50% 85%;
+  object-position: 50% 90%;
 }
 
 .avatar-placeholder {
