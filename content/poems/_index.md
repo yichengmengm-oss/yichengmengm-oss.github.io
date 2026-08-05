@@ -1,7 +1,7 @@
 ---
 title: Poems
 weight: 4
-description: 偶尔落笔，现代与古体并存。
+description: 诗歌是一场烈火。
 ---
 
-现代诗与古体诗分列两侧。写完才发，不草稿示人。
+  明月湾头纵酒，藕花深处泛舟。
