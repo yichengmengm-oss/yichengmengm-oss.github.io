@@ -1,7 +1,7 @@
 ---
 title: Essays
 weight: 3
-description: 散落的想法，不限主题。
+description: 这半日闲里，纸上的闲谈。
 ---
 
 一些随笔。
