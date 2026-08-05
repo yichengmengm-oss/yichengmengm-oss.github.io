@@ -1,9 +1,9 @@
 ---
 title: Notes
 weight: 1
-description: 自编课程讲义，从量子力学到经典力学。
+description: 物理课程笔记，根据个人想法整理。
 ---
 
-整理中的物理课程讲义。每门课一份，按章节推进。
+整理中……
 
 [上传 PDF](https://github.com/yichengmengm-oss/yichengmengm-oss.github.io/upload/main/static/notes)
